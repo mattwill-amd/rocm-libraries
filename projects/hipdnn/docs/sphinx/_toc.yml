@@ -87,7 +87,7 @@ subtrees:
           - file: reference/frontend-api/frontend-error.rst
             title: Error
       - file: reference/backend-api/backend-api.rst
-        title: Backend C++
+        title: Backend C
         subtrees:
         - entries:
           - file: reference/backend-api/backend-attribute.rst
@@ -104,6 +104,8 @@ subtrees:
             title: Limits
           - file: reference/backend-api/backend-status.rst
             title: Status
+          - file: reference/backend-api/backend-flatbuffer.rst
+            title: FlatBuffer data
           - file: reference/backend-api/backend-plugin-loading.rst
             title: Plugin loading mode
           - file: reference/backend-api/backend-plugin-unloading.rst

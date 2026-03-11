@@ -6,7 +6,7 @@
 hipDNN quick start
 ******************
 
-This guide shows how to consume an already-installed hipDNN in a CMake project. 
+This guide demonstrates how to include hipDNN in a CMake project. This guide requires hipDNN and ROCM already installed on your system.
 
 .. important::
 
@@ -23,7 +23,7 @@ Prerequisites
 Configure project files
 =======================
 
-1. Configure your ``CMakeLists.txt`` file:
+1. Add ``hipdnn_frontend`` in your ``CMakeLists.txt`` file:
 
    .. code:: cmake
 
@@ -39,7 +39,7 @@ Configure project files
    .. note::
 
      - ``find_package(hipdnn_frontend)`` transitively brings in ``hipdnn_backend``, ``hipdnn_data_sdk``, and ``hip`` — only one ``find_package`` call is needed. HIP runtime APIs (``hipMalloc``, ``hipFree``, etc.) are available through the transitive ``hip::host`` link dependency.
-     - If CMake can't find the packages, set ``CMAKE_PREFIX_PATH`` to the install location. hipDNN CMake files are installed to ``/opt/rocm/lib/cmake`` by default, which CMake may already search automatically depending on your system configuration.
+     - If CMake can't find the packages, set ``CMAKE_PREFIX_PATH`` to the ROCm install location. hipDNN CMake files are installed to ``<ROCM Install Path>/lib/cmake`` by default, which CMake may already search automatically depending on your system configuration. For example: ``-DCMAKE_PREFIX_PATH=/opt/rocm/lib/cmake``.
 
 
 2. Include the frontend header to access the hipDNN graph API:
@@ -49,14 +49,3 @@ Configure project files
      #include <hipdnn_frontend.hpp>
 
    See `Samples <https://github.com/ROCm/rocm-libraries/blob/develop/projects/hipdnn/samples/README.md>`_ for complete working examples of building and executing operation graphs.
-
-Build the project
-=================
-
-Use this code to build the project:
-
-.. code:: bash
-
-  mkdir build && cd build
-  cmake -GNinja -DCMAKE_PREFIX_PATH=/opt/rocm ..
-  ninja

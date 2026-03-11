@@ -16,7 +16,7 @@ flavor options: rocm, rocm-docs-home, rocm-blogs, rocm-ds, instinct, ai-develope
 html_theme = "rocm_docs_theme"
 html_theme_options = {
     "flavor": "generic",
-    "header_title": "hipDNN (Beta) 1.0.0",
+    "header_title": "hipDNN (Beta) 0.1.0",
     "header_link": "https://rocm.docs.amd.com/projects/hipdnn/en/latest/",
     "nav_secondary_items": {
         "GitHub": "https://github.com/ROCm/rocm-libraries/tree/develop/projects/hipdnn",
@@ -37,7 +37,7 @@ version_number = "0.1.0"
 # for PDF output on Read the Docs
 project = f"{name}"
 author = "Advanced Micro Devices, Inc."
-copyright = "Copyright (c) 2024 Advanced Micro Devices, Inc. All rights reserved."
+copyright = "Copyright (c) 2026 Advanced Micro Devices, Inc. All rights reserved."
 version = version_number
 release = version_number
 

@@ -9,22 +9,10 @@ subtrees:
 
 - caption: Install
   entries:
-  - file: install/users.rst
-    title: For users
-    subtrees:
-    - entries:
-      - file: install/quickstart.rst
-        title: Quick start
-  - file: install/plugin-developers.rst
-    title: For plugin developers
-    subtrees:
-    - entries:
-      - file: install/hipdnn-prerequisites.rst
-        title: Prerequisites
-      - file: install/hipdnn-install.rst
-        title: hipDNN installation (Linux)
-      - file: install/hipdnn-install-windows.rst
-        title: hipDNN installation (Windows)
+  - file: install/hipdnn-prerequisites.rst
+    title: Prerequisites
+  - file: install/quickstart.rst
+    title: Quick start
 
 - caption: Conceptual
   entries:
@@ -61,11 +49,13 @@ subtrees:
     subtrees:
     - entries:
       - file: reference/miopen-plugin.rst
-        title: MIOpen Provider plugin
+        title: MIOpen provider
       - file: reference/hipblaslt.rst
-        title: hipBLASLt Provider plugin
+        title: hipBLASLt provider
   - file: reference/environment-variables.rst
     title: Environment variables
+  - file: reference/glossary.rst
+    title: Glossary
   - file: reference/api-reference.rst
     title: API reference
     subtrees:
@@ -110,10 +100,8 @@ subtrees:
             title: Plugin loading mode
           - file: reference/backend-api/backend-plugin-unloading.rst
             title: Plugin unloading mode
-  - file: reference/naming-guidelines.rst
-    title: Coding style and naming guidelines
-  - file: reference/glossary.rst
-    title: Glossary
+      - file: reference/knob-api.rst
+        title: Knobs
 
 - caption: About
   entries:
